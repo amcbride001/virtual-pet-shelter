@@ -51,6 +51,11 @@ public class VirtualPetShelter {
 		this.shelter = shelter;
 	}
 
+	public void tick() {
+		
+		
+	}
+
 	
 		
 	}

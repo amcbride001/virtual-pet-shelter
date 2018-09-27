@@ -6,6 +6,7 @@ public class VirtualPetShelterApp {
 
 	private static final String shelter = null;
 
+
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
@@ -30,12 +31,14 @@ public class VirtualPetShelterApp {
 			if (userInput.equals("1")) {
 				
 				System.out.println("You fed all the pets. ");
-				shelter.feedAllPets();
+				 Object feedAllPets;
+				
 				System.out.println("What would you like to do next?");
 
 			}
 			if (userInput.equals("2")) {
-				shelter.giveWaterToShelter();
+				Object giveWaterToShelter;
+	
 				System.out.println("You gave all the pets water.");
 				System.out.println("What would you like next?");
 			} else if (userInput.equals("3")) {
@@ -44,7 +47,6 @@ public class VirtualPetShelterApp {
 				System.out.println("2. Hershey the not so chocolate labrador.");
 				System.out.println("3. Tofu the cat who thinks he's a dog.");
 			int petNum=1;
-			for (VirtualPet pet : shelter.getName()) {
 				System.out.println(petNum + ".  Pet #" + petNum );
 			}
 			
@@ -55,5 +57,5 @@ public class VirtualPetShelterApp {
 			}
 		}
 	}
-}
+
 

@@ -12,15 +12,20 @@ public class VirtualPetShelter {
 	private VirtualPet goPlay;
 
 	// create a shelter then give options for user
-	VirtualPetShelter() {
+	VirtualPetShelter(int i) {
 		pets = new HashMap<String, VirtualPet>();
 	}
 
-	public void addPet(VirtualPet pet) {
-		pets.put(pet.getName(), pet);
+	public VirtualPetShelter() {
+		
 	}
 
-	public  VirtualPet getPet(String name) {
+	public VirtualPet addPet(VirtualPet pet) {
+		pets.put(pet.getName(), pet);
+		return pet;
+	}
+
+	public VirtualPet getPet(String name) {
 		return pets.get(name);
 	}
 
@@ -34,7 +39,7 @@ public class VirtualPetShelter {
 	}
 
 	public VirtualPet goPlay(String name) {
-		
+
 		return goPlay;
 	}
 
@@ -51,13 +56,14 @@ public class VirtualPetShelter {
 		this.shelter = shelter;
 	}
 
+	public Object getPets() {
+
+		return pets;
+
+	}
+
 	public void tick() {
-		
-		
+
 	}
 
-	
-		
-	}
-
-
+}

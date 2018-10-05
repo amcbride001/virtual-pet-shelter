@@ -1,15 +1,11 @@
 package shelter;
 
-import java.util.Collection;
 import java.util.HashMap;
 
 public class VirtualPetShelter {
 
 	private HashMap<String, VirtualPet> pets;
 	private String shelter;
-	private String giveWaterToShelter;
-	private String feedAllPets;
-	private VirtualPet goPlay;
 
 	// create a shelter then give options for user
 	VirtualPetShelter(int i) {
@@ -17,7 +13,7 @@ public class VirtualPetShelter {
 	}
 
 	public VirtualPetShelter() {
-		
+
 	}
 
 	public VirtualPet addPet(VirtualPet pet) {
@@ -29,22 +25,26 @@ public class VirtualPetShelter {
 		return pets.get(name);
 	}
 
-	public String giveWaterToShelter() {
-		return giveWaterToShelter;
+	public void giveWaterToShelter() {
+		for (VirtualPet pet : pets.values()) {
+			pet.getHydration();
+		}
 	}
 
-	public String feedAllPets() {
-		return feedAllPets;
-
+	public void feedAllPets() {
+		for (VirtualPet pet : pets.values()) {
+			pet.getFullness();
+		}
 	}
 
-	public VirtualPet goPlay(String name) {
+	public void happiness(String name) {
 
-		return goPlay;
+		for(VirtualPet pet:pets.values()) {
+			pet.happiness();
 	}
-
+	}
 	public void removePet(VirtualPet pet) {
-		pets.remove(pet);
+		pets.remove("");
 
 	}
 

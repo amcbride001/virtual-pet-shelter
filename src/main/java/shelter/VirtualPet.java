@@ -1,41 +1,49 @@
 package shelter;
 
 public class VirtualPet {
-	private String tofu;
-	private String chucky;
-	private String hershey;
-	private String pet;
-	private String feed;
-	private String hydration;
-	private String goPlay;
+
+	private int fullness;
+	private int hydration;
+	private int happiness;
 	private String name;
 
-	public VirtualPet(String string) {
+	public VirtualPet(String name) {
+		this.name = name;
 
 	}
 
-	public String getHydration() {
+	public int getHydration() {
 		return hydration;
 	}
 
-	public String getFeedPets() {
-		return feed;
+	public int getFullness() {
+		return fullness;
 	}
 
-	public String getGoPlay() {
-		return goPlay;
+	public int getHappiness() {
+		return happiness;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void water() {
+		this.hydration += 6;
+		
+	}
+	public void feed() {
+		this.fullness  +=3;
+		
 	}
 
-	public String takeHome() {
-		return name;
-
+	public void happiness() {
+		this.happiness +=8;
+		
 	}
-}
+
+	public void removePet(String string) {
+		
+		
+	}
+	}

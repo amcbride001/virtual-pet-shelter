@@ -16,7 +16,7 @@ public class VirtualPetShelterApp {
 		VirtualPetShelter shelter = new VirtualPetShelter();
 
 		String userInput = "";
-		while (!userInput.equals("6")) {
+		while (!userInput.equals("5")) {
 
 			System.out.println("Welcome to the A to Exotics Pet Shelter, " + player + "!\n");
 			System.out.println("Here are your options...");
@@ -25,6 +25,7 @@ public class VirtualPetShelterApp {
 			System.out.println("3. Play with one pet.");
 			System.out.println("4. Adopt a pet.");
 			System.out.println("5. Admit a new homeless pet.");
+			System.out.println("6. Leave the shelter.");
 			System.out.println("What is your choice?");
 			userInput = input.nextLine();
 			{
@@ -44,31 +45,39 @@ public class VirtualPetShelterApp {
 				}
 				if (userInput.equals("3")) {
 					System.out.println("Which pet would you like to play with?");
+					System.out.println("1. Chucky the lonely colorblind chameleon.");
+					System.out.println("2. Hershey the not so chocolate labrador.");
+					System.out.println("3. Tofu the cat who thinks he's a dog.");
 					VirtualPet pet = new VirtualPet("");
-					pet.getGoPlay();
+					input.nextLine();
+					pet.getHappiness();
 
 				}
-				System.out.println("Your choice: ");
-				int userInputNum = input.nextInt();
-				input.nextLine();
+
+				if (userInput.equals("4")) {
+					System.out.println("Which pet would you like to adopt?");
+					System.out.println("1. Chucky the lonely colorblind chameleon.");
+					System.out.println("2. Hershey the not so chocolate labrador.");
+					System.out.println("3. Tofu the cat who thinks he's a dog.");
+					input.nextLine();
+					System.out.println("You adopted a new pet.");
+					input.nextLine();
+				
+				}
+				if (userInput.equals("5")) {
+					System.out.println("Type the name of the new pet.");
+					input.nextLine();
+					System.out.println("You admitted " + userInput + ". You saved a pet.");
+
+				}
+				if(userInput.equals("6")) {
+					System.out.println("Goodbye for now.");
+					input.close();
+				}
+
+				shelter.tick();
 			}
-			System.out.println("1. Chucky the lonely colorblind chameleon.");
-			System.out.println("2. Hershey the not so chocolate labrador.");
-			System.out.println("3. Tofu the cat who thinks he's a dog.");
 
 		}
-
-		if (userInput.equals("4")) {
-			System.out.println("Which pet would you like to adopt?");
-			VirtualPet pet = new VirtualPet("");
-			pet.takeHome();
-		}
-		if (userInput.equals("5")) {
-			System.out.println("Type the name of the new pet.");
-		
-		}
-
-		shelter.tick();
 	}
-
 }

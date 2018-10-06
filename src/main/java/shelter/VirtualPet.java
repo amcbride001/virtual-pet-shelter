@@ -46,4 +46,14 @@ public class VirtualPet {
 		
 		
 	}
+
+	public void getGoPlay() {
+	
+		
+	}
+
+	public void takeHome() {
+		
+		
+	}
 	}

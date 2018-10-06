@@ -8,12 +8,8 @@ public class VirtualPetShelter {
 	private String shelter;
 
 	// create a shelter then give options for user
-	VirtualPetShelter(int i) {
-		pets = new HashMap<String, VirtualPet>();
-	}
-
 	public VirtualPetShelter() {
-
+		pets = new HashMap<String, VirtualPet>();
 	}
 
 	public VirtualPet addPet(VirtualPet pet) {

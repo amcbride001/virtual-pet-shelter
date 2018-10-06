@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class VirtualPetShelterApp {
 
-	private static final String shelter = null;
-
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
@@ -67,15 +65,15 @@ public class VirtualPetShelterApp {
 				if (userInput.equals("5")) {
 					System.out.println("Type the name of the new pet.");
 					input.nextLine();
-					System.out.println("You admitted " + userInput + ". You saved a pet.");
+					System.out.println("You saved a pet.");
 
 				}
 				if(userInput.equals("6")) {
 					System.out.println("Goodbye for now.");
-					input.close();
+				shelter.tick();
 				}
 
-				shelter.tick();
+				
 			}
 
 		}

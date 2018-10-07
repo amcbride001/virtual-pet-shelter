@@ -15,14 +15,14 @@ public class TestShelter {
 	@Test
 	public void shouldBeAbleToAddPets() {
 		VirtualPetShelter shelter = new VirtualPetShelter();
-		VirtualPet pet = new VirtualPet("");
+		VirtualPet pet = new VirtualPet("", 0, 0, 0);
 		shelter.addPet(pet);
 	}
 
 	@Test
 	public void shouldBeAbleToGetPetByName() {
 		VirtualPetShelter shelter = new VirtualPetShelter();
-		VirtualPet pet = new VirtualPet("");
+		VirtualPet pet = new VirtualPet("", 0, 0, 0);
 		shelter.addPet(pet);
 		VirtualPet result = shelter.getPet(pet.getName());
 		assertThat(result, is(pet));
@@ -44,13 +44,13 @@ public class TestShelter {
 	@Test
 	public void shouldBeAbleToPlayWithPet() {
 
-		VirtualPet pet = new VirtualPet("");
+		VirtualPet pet = new VirtualPet("", 0, 0, 0);
 		pet.getGoPlay();
 
 	}
 	@Test
 	public void shouldBeAbleToAdoptAPet() {
-		VirtualPet pet = new VirtualPet("");
+		VirtualPet pet = new VirtualPet("", 0, 0, 0);
 		pet.takeHome();
 	}
 }

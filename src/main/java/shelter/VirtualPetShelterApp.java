@@ -64,18 +64,23 @@ public class VirtualPetShelterApp {
 				}
 				if (userInput.equals("5")) {
 					System.out.println("Type the name of the new pet.");
-					input.nextLine();
+					String pet = input.nextLine();
 					System.out.println("You saved a pet.");
 
 				}
-				if(userInput.equals("6")) {
-					System.out.println("Goodbye for now.");
 				shelter.tick();
+				
+			
+					System.out.println("Goodbye for now.");
+					
+					input.close();
+				
 				}
 
 				
 			}
 
 		}
+	
 	}
-}
+

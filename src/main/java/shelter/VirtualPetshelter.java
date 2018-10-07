@@ -52,14 +52,23 @@ public class VirtualPetShelter {
 		this.shelter = shelter;
 	}
 
+	public void getGoPlay(String name) {
+		pets.get(name).getGoPlay();
+	}
+	
 	public Object getPets() {
 
 		return pets;
 
 	}
 
-	public void tick() {
+	public  void tick() {
+		
+		
+	}
+
+	
 
 	}
 
-}
+

@@ -7,8 +7,12 @@ public class VirtualPet {
 	private int happiness;
 	private String name;
 
-	public VirtualPet(String name) {
+	
+	public VirtualPet(String name, int hydration, int happiness, int fullness) {
 		this.name = name;
+		this.hydration = hydration;
+		this.happiness = happiness;
+		this.fullness = fullness;
 
 	}
 
@@ -54,6 +58,7 @@ public class VirtualPet {
 
 	public void takeHome() {
 		
-		
-	}
+	
+		}
+	
 	}

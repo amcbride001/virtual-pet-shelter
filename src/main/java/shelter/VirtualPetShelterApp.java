@@ -29,16 +29,17 @@ public class VirtualPetShelterApp {
 			{
 				if (userInput.equals("1")) {
 
-					System.out.println("You fed all the pets. ");
-					System.out.println();
+					System.out.println("You fed all the pets.");
 					shelter.feedAllPets();
+					System.out.println();
+					
 
 				}
 				if (userInput.equals("2")) {
 
 					System.out.println("You gave all the pets water.");
-					System.out.println();
 					shelter.giveWaterToShelter();
+					System.out.println();
 
 				}
 				if (userInput.equals("3")) {
@@ -46,9 +47,9 @@ public class VirtualPetShelterApp {
 					System.out.println("1. Chucky the lonely colorblind chameleon.");
 					System.out.println("2. Hershey the not so chocolate labrador.");
 					System.out.println("3. Tofu the cat who thinks he's a dog.");
-					VirtualPet pet = new VirtualPet("");
 					input.nextLine();
-					pet.getHappiness();
+					System.out.println("You played with a pet.");
+				
 
 				}
 
@@ -65,15 +66,17 @@ public class VirtualPetShelterApp {
 				if (userInput.equals("5")) {
 					System.out.println("Type the name of the new pet.");
 					String pet = input.nextLine();
-					System.out.println("You saved a pet.");
+					System.out.println("You saved " + pet + ".");
 
 				}
-				shelter.tick();
+				if(userInput.equals("6")) {
+					System.out.println("Goodbye for now.");
+				}
+					
+					shelter.tick();
+				
 				
 			
-					System.out.println("Goodbye for now.");
-					
-					input.close();
 				
 				}
 
@@ -83,4 +86,3 @@ public class VirtualPetShelterApp {
 		}
 	
 	}
-

@@ -40,7 +40,7 @@ public class VirtualPetShelter {
 	}
 	}
 	public void removePet(VirtualPet pet) {
-		pets.remove("");
+		pets.remove(pet.getName());
 
 	}
 
